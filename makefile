@@ -181,6 +181,7 @@ driver: makepath
 	$(CC) -o $(BIN_DIR)/SimpleSIFT $(SRC_DRIVER)/SimpleSIFT.cpp $(LIBS_SIMPLESIFT) $(CFLAGS) 
 	$(CC) -o $(BIN_DIR)/speed $(SRC_DRIVER)/speed.cpp $(LIBS_DRIVER) $(CFLAGS) 
 	$(CC) -o $(BIN_DIR)/MultiThreadSIFT $(SRC_DRIVER)/MultiThreadSIFT.cpp $(LIBS_DRIVER) $(CFLAGS)  -pthread
+	$(CC) -o $(BIN_DIR)/MySimpleSIFT $(SRC_DRIVER)/MySimpleSIFT.cpp $(LIBS_SIMPLESIFT) $(CFLAGS) 
 	
 ifneq ($(siftgpu_enable_server), 0)
 server: makepath
@@ -201,6 +202,7 @@ clean:
 	rm -f $(BIN_DIR)/libsiftgpu.so
 	rm -f $(BIN_DIR)/TestWinGlut
 	rm -f $(BIN_DIR)/SimpleSIFT
+	rm -f $(BIN_DIR)/MySimpleSIFT
 	rm -f $(BIN_DIR)/speed
 	rm -f $(BIN_DIR)/server_siftgpu
 	rm -f $(BIN_DIR)/MultiThreadSIFT

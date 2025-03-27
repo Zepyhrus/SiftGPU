@@ -58,11 +58,13 @@ University of North Carolina at Chapel Hill
 
 
 
-4. Dependencies
+4. Installation
 
 ```bash
-
+# dependencies
 sudo apt-get install freeglut3-dev 
 sudo apt-get install libdevil-dev
 
+# compile
+sudo make
 ```
