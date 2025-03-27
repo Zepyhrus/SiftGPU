@@ -176,7 +176,7 @@ int main()
     //The same context can be used by SiftMatchGPU
     if(sift->CreateContextGL() != SiftGPU::SIFTGPU_FULL_SUPPORTED) return 0;
 
-    if(sift->RunSIFT("../data/800-1.jpg"))
+    if(sift->RunSIFT("../data/kn_church-2.jpg"))
     {
         //Call SaveSIFT to save result to file, the format is the same as Lowe's
         //sift->SaveSIFT("../data/800-1.sift"); //Note that saving ASCII format is slow
@@ -190,12 +190,13 @@ int main()
         //reading back feature vectors is faster than writing files
         //if you dont need keys or descriptors, just put NULLs here
         sift->GetFeatureVector(&keys1[0], &descriptors1[0]);
-        //this can be used to write your own sift file.            
+        //this can be used to write your own sift file.
+        sift->SaveSIFT("../data/kn_church-2.sift.1");
     }
 
     //You can have at most one OpenGL-based SiftGPU (per process).
     //Normally, you should just create one, and reuse on all images. 
-    if(sift->RunSIFT("../data/640-1.jpg"))
+    if(sift->RunSIFT("../data/kn_church-8.jpg"))
     {
         num2 = sift->GetFeatureNum();
         keys2.resize(num2);    descriptors2.resize(128*num2);

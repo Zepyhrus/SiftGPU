@@ -307,8 +307,8 @@ void SiftPyramid::SaveSIFT(const char * szFileName)
 			for(int i = 0; i < _featureNum; i++)
 			{
 				//in y, x, scale, orientation order
-				out<<setprecision(2) << pk[1]<<" "<<setprecision(2) << pk[0]<<" "
-					<<setprecision(3) << pk[2]<<" " <<setprecision(3) <<  pk[3]<< endl; 
+				out << setprecision(4) << pk[1] << " " << setprecision(4) << pk[0]<<" "
+					  << setprecision(4) << pk[2] << " " << setprecision(4) << pk[3]<< endl; 
 
 				////out << setprecision(12) << pk[1] <<  " " << pk[0] << " " << pk[2] << " " << pk[3] << endl;
 				pk+=4;

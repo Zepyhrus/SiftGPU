@@ -88,7 +88,7 @@ int GlobalParam::		_KeepShaderLoop = 0;
 
 //you can't change the following 2 values
 //all other versions of code are now dropped
-int GlobalParam::       _DescriptorPPR = 8;
+int GlobalParam::   _DescriptorPPR = 8;
 int	GlobalParam::		_DescriptorPPT = 16;
 
 //whether orientation/descriptor is supported by hardware

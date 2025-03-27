@@ -7,3 +7,5 @@ CMakeFiles
 CMakeCache.txt
 
 demos
+
+*.sift.*
